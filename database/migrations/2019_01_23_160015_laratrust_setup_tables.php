@@ -12,7 +12,7 @@ class LaratrustSetupTables extends Migration
     public function up()
     {
         // Create table for storing roles
-      /*  Schema::create('roles', function (Blueprint $table) {
+       Schema::create('roles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
             $table->string('display_name')->nullable();
@@ -51,7 +51,7 @@ class LaratrustSetupTables extends Migration
                 ->onUpdate('cascade')->onDelete('cascade');
 
             $table->primary(['user_id', 'permission_id', 'user_type']);
-        });*/
+        });
 
         // Create table for associating permissions to roles (Many-to-Many)
         Schema::create('permission_role', function (Blueprint $table) {
